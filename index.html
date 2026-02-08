@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7BLESSED comeback</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Обложка -->
+        <div class="page active" id="page1">
+            <h1>7BLESSED ANTIHYPE</h1>
+            <img src="https://i.ibb.co/v6bjvdb/IMG-20260208-135912-046.jpg" class="comic-image">
+            <p>чета умное</p>
+            <button onclick="showPage(2)" class="tg-button">познакомиться</button>
+        </div>
+
+        <!-- Страница 2 -->
+        <div class="page" id="page2">
+            <h2>выбирай либо ты идешь со мной и бы будем встречаться либо я умру</h2>
+            <img src="https://i.ibb.co/4nzYKH/IMG-20260208-135859-473.jpg" class="comic-image">
+            <p>узнать о</p>
+            <button onclick="makeChoice('attack')" class="choice-btn">узнать о прошлом</button>
+            <button onclick="makeChoice('talk')" class="choice-btn">о камбэке</button>
+            <button onclick="makeChoice('read')" class="choice-btn">поговорить с ребятами</button>
+            
+            <div class="navigation">
+                <button onclick="showPage(1)" class="nav-btn">⬅️ Назад</button>
+            </div>
+        </div>
+
+        <!-- Страница 3: узнать о прошлом -->
+        <div class="page" id="page3-attack">
+            <h2>Результат: узнать о прошлом</h2>
+            <img src="https://i.ibb.co/tTrP7Kd/IMG-20260208-135858-796.jpg" class="comic-image">
+            <p>инфа о прошлом</p>
+            <button onclick="sendToTelegram('хисынчик')" class="tg-button">
+                📤 Отправить свой выбор в Telegram
+            </button>
+        </div>
+
+        <!-- Страница 4: о камбэке -->
+        <div class="page" id="page3-talk">
+            <h2>Результат: о камбэке</h2>
+            <img src="https://i.ibb.co/r2dBv7W/IMG-20260208-135855-417.jpg" class="comic-image">
+            <p>инфа про кб</p>
+            <button onclick="sendToTelegram('юнон секси')" class="tg-button">
+                📤 Отправить свой выбор в Telegram
+            </button>
+        </div>
+
+        <!-- Страница 5: поговорить с ребятами -->
+        <div class="page" id="page3-read">
+            <h2>Результат: поговорить с ребятами</h2>
+            <img src="https://i.ibb.co/mCX1z2q6/IMG-20260208-135850-424.jpg" class="comic-image">
+            <p>ребята чета глаголят</p>
+            <button onclick="sendToTelegram('все')" class="tg-button">
+                📤 Отправить в Telegram
+            </button>
+        </div>
+
+        <!-- Индикатор страниц -->
+        <div class="page-indicator">
+            <span class="dot active" onclick="showPage(1)"></span>
+            <span class="dot" onclick="showPage(2)"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

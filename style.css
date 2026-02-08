@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.page.active {
+    display: block;
+}
+
+.comic-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #00acee;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+h1, h2 {
+    color: #00ffcc;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.tg-button, .choice-btn, .nav-btn {
+    background: linear-gradient(45deg, #00acee, #0088cc);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choice-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.choice-btn:nth-child(2) {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.choice-btn:nth-child(3) {
+    background: linear-gradient(45deg, #ffe66d, #fdcb6e);
+}
+
+.tg-button:hover, .choice-btn:hover, .nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 172, 238, 0.7);
+}
+
+.page-indicator {
+    margin-top: 30px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #00acee;
+    box-shadow: 0 0 10px #00acee;
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
